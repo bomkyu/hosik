@@ -1,10 +1,12 @@
 .section1 {
   display: flex;
+  position: relative;
   margin-bottom: 20%;
   height: 60vh;
   flex-direction: column;
   justify-content: center;
   background: #e8a54e;
+  overflow: hidden;
 }
 .section1 > * {
   text-align: center;
@@ -18,6 +20,43 @@
 }
 .section1 > p {
   margin-top: 32px;
+}
+.section1 .logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.section1 .triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 0 solid transparent;
+  border-bottom: 290px solid #f3cd5e;
+  border-left: 295px solid transparent;
+}
+
+.section1::before {
+  position: absolute;
+  width: 183px;
+  height: 179px;
+  top: 0;
+  right: 0;
+  background: url('./images/img_section1_1.png');
+  z-index: 999;
+  content: '';
+}
+
+.section1::after {
+  position: absolute;
+  width: 239px;
+  height: 173px;
+  bottom: -5px;
+  right: 64px;
+  background: url('./images/img_section1_2.png');
+  content: '';
 }
 
 .section2 {
