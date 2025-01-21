@@ -17,7 +17,9 @@
       </p>
     </section>
     <section class="section2">
-      <h1 style="position: sticky">대화 시작한지 00:00 분째</h1>
+      <h1 style="position: sticky">
+        대화 시작한지 <span id="timer">00:00</span> 분째
+      </h1>
       <h2>30분 대화하고, 안마기 타가자!</h2>
       <p>*해당 페이지에 접속한지 30분이 지나면,<br />자동으로 응모창이 떠요</p>
     </section>
@@ -62,7 +64,7 @@
     <section class="section5">
       <div>
         <div>
-          <p>2025.xx.xx 오늘의 대화주제 3가지</p>
+          <p><span id="date">2025.xx.xx</span> 오늘의 대화주제 3가지</p>
         </div>
         <ul>
           <li>내일 세상이 멸망한다면, 내가 할 일은?</li>
@@ -74,9 +76,77 @@
     <section class="section6">
       <h1>대화주제가 더 필요하다면?</h1>
       <div>
-        <div><p>랜덤하게 대화주제 뜨기</p></div>
-        <button>다시 뽑기</button>
+        <div><p id="subject">랜덤하게 대화주제 뜨기</p></div>
+        <button id="subject_btn">다시 뽑기</button>
       </div>
     </section>
   </body>
 </html>
+
+<script>
+  const today = new Date();
+  const formattedDate = `${today.getFullYear()}.${String(
+    today.getMonth() + 1
+  ).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
+
+  const dateElement = document.getElementById('date');
+  if (dateElement) {
+    dateElement.textContent = formattedDate;
+  }
+
+  let secondsElapsed = 0;
+
+  const timerInterval = setInterval(() => {
+    const minutes = Math.floor(secondsElapsed / 60);
+    const seconds = secondsElapsed % 60;
+
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(
+      seconds
+    ).padStart(2, '0')}`;
+
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+      timerElement.textContent = formattedTime;
+    }
+
+    if (secondsElapsed >= 1800) {
+      clearInterval(timerInterval);
+    }
+
+    secondsElapsed++;
+  }, 1000);
+
+  const topics = [
+    '요즘 내가 제일 좋아하는/먹어보고 싶은 음식은?',
+    '내일 세상이 멸망한다면, 내가 할 일은?',
+    '절대 질리지 않는 것이 있다면?',
+    '가장 최근에 본 영화 소개하기',
+    '내가 생각하는 나의 장점은?',
+    '요즘에 가장 가보고 싶은 여행지는?',
+    '최근에 관심이 가는 연예인 세 명씩 말해보기',
+    '최근에 먹게 된 / 도전해보고 싶은 음식이 있다면?',
+    '여름 / 겨울 중 내가 제일 좋아하는 계절은?',
+    '가장 좋아하는 영화 장르와 그 이유',
+    '나에게 가장 기억에 남는 여행 경험이 있다면?',
+    '내가 고치고 싶은 습관이나 버릇',
+    '서로의 카톡 저장명 살펴보기',
+    '한식, 중식, 일식 중 가장 좋아하는 것은?',
+    '단 맛과, 매운 맛 중에 하나만 선택할 수 있다면?',
+    '가장 최근에 본 유튜브 영상은?',
+    '나 / 서로를 동물로 비유한다면?',
+    '나의 사용량 1,2,3위인 어플 소개하기',
+    '이틀 정도의 휴식 시간이 주어지면, 내가 할 일은?',
+    '가장 좋아하는 노래 가사가 있다면?',
+    '잃어버렸던 물건들 중에 하나만 찾을 수 있다면',
+    '나를 눈물흘리게 만들었던 음악/영화/드라마',
+    '옆 사람의 장점 하나씩 말하기',
+    '내가 가장 맛있다고 생각하는 라면 브랜드는?',
+    '지난 3일간, 나의 가장 큰 고민은?',
+    '초등학생 시절, 가장 생생하게 생각나는 기억이 하나 있다면?',
+    '고양이 vs 강아지',
+  ];
+  document.getElementById('subject_btn').addEventListener('click', () => {
+    const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+    document.getElementById('subject').textContent = randomTopic;
+  });
+</script>

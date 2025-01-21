@@ -29,6 +29,11 @@
 .section2 > h1 {
   font-size: 32px;
 }
+
+.section2 > h1 > span {
+  font-size: 32px;
+}
+
 .section2 > h2 {
   font-size: 18px;
   margin-top: 12px;
@@ -124,6 +129,10 @@
 }
 
 .section5 > div > div > p {
+  font-size: 24px;
+}
+
+.section5 > div > div > p > span {
   font-size: 24px;
 }
 
