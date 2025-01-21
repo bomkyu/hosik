@@ -101,7 +101,7 @@
 }
 .section4 > div > p {
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.5;
   color: #ccc;
 }
 .section5 {
@@ -131,21 +131,24 @@
   display: flex;
   padding: 60px 20px;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
+  background: #ffffff56;
 }
 
 .section5 > div > ul > li {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .section6 {
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .section6 > h1 {
+  margin: 48px 0;
   font-size: 32px;
 }
 
@@ -161,7 +164,11 @@
   background-color: #fff;
 }
 
-.section6 > div > div > button {
+.section6 > div > button {
+  display: block;
   width: 100%;
+  padding: 20px;
+  margin-top: 20px;
   background: #fff;
+  font-size: 16px;
 }
