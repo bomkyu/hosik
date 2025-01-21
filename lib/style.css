@@ -1,0 +1,89 @@
+.section1 {
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  justify-content: center;
+  background: #e8a54e;
+}
+.section1 > * {
+  text-align: center;
+  color: #fff;
+}
+.section1 > h1 {
+  font-size: 48px;
+}
+.section1 > h2 {
+  font-size: 28px;
+}
+.section1 > p {
+  margin-top: 32px;
+}
+
+.section2 {
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section2 > h1 {
+  font-size: 32px;
+}
+.section2 > h2 {
+  font-size: 18px;
+  margin-top: 12px;
+}
+.section2 > p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1;
+  color: #ccc;
+}
+
+.section3 {
+  display: flex;
+  padding: 20% 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.section3 > * {
+  color: #fff;
+}
+
+.section3 > h2 {
+  font-size: 28px;
+}
+.section3 > h1 {
+  margin: 42px 0;
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.section4 {
+  display: flex;
+  padding: 128px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section4 > h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.section4 > h2 > span {
+  font-size: 24px;
+}
+
+.section4 > h2:first-child {
+  margin-bottom: 18px;
+}
+
+.section4 > ul {
+  display: flex;
+  gap: 32px;
+}
