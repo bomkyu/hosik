@@ -85,5 +85,83 @@
 
 .section4 > ul {
   display: flex;
+  margin-top: 46px;
   gap: 32px;
+}
+
+.section4 > ul > li {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  gap: 4px;
+}
+.section4 > div {
+  margin-top: 24px;
+  font-size: 12px;
+}
+.section4 > div > p {
+  font-size: 14px;
+  line-height: 1;
+  color: #ccc;
+}
+.section5 {
+  display: flex;
+  height: 420px;
+  padding: 0 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('./images/bg_section5.png') center/cover no-repeat;
+}
+.section5 > div {
+  width: 100%;
+  border: 2px solid #e8a54e;
+}
+
+.section5 > div > div {
+  padding: 20px;
+  background: #e8a54e;
+}
+
+.section5 > div > div > p {
+  font-size: 24px;
+}
+
+.section5 > div > ul {
+  display: flex;
+  padding: 60px 20px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section5 > div > ul > li {
+  font-size: 18px;
+}
+
+.section6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section6 > h1 {
+  font-size: 32px;
+}
+
+.section6 > div {
+  width: 100%;
+  padding: 40px;
+  background-color: #4e4e4e;
+}
+
+.section6 > div > div {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.section6 > div > div > button {
+  width: 100%;
+  background: #fff;
 }
