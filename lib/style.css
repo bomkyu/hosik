@@ -1,5 +1,6 @@
 .section1 {
   display: flex;
+  margin-bottom: 20%;
   height: 60vh;
   flex-direction: column;
   justify-content: center;
@@ -20,11 +21,12 @@
 }
 
 .section2 {
+  padding-bottom: 20%;
   display: flex;
-  padding: 10%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 .section2 > h1 {
   font-size: 32px;
@@ -91,15 +93,23 @@
 .section4 > ul {
   display: flex;
   margin-top: 46px;
-  gap: 32px;
+  padding: 20px;
+  gap: 24px;
 }
 
 .section4 > ul > li {
   display: flex;
-  width: 150px;
+  width: 25%;
   flex-direction: column;
-  gap: 4px;
 }
+.section4 > ul > li > div {
+  margin-top: 8px;
+}
+.section4 > ul > li > div > p {
+  line-height: 1.2;
+  font-size: 14px;
+}
+
 .section4 > div {
   margin-top: 24px;
   font-size: 12px;
@@ -145,7 +155,7 @@
 }
 
 .section5 > div > ul > li {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .section6 {
@@ -180,4 +190,19 @@
   margin-top: 20px;
   background: #fff;
   font-size: 16px;
+}
+
+.timer_wrap {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  font-size: 32px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 25px 3px rgba(204, 204, 204, 0.39);
+}
+
+.timer_wrap > span {
+  font-size: 32px;
 }
