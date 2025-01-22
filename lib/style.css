@@ -1,7 +1,6 @@
 .section1 {
   display: flex;
   position: relative;
-  margin-bottom: 20%;
   height: 434px;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +9,6 @@
 }
 .section1 > div > * {
   text-align: center;
-  color: #fff;
 }
 
 .section1 > div {
@@ -18,9 +16,13 @@
 }
 .section1 > div > h1 {
   font-size: 48px;
+  color: #5d390b;
+  font-weight: bold;
+  font-family: 'KHNPHD', sans-serif;
 }
 .section1 > div > h2 {
   font-size: 28px;
+  color: #39260f;
 }
 .section1 > p {
   margin-top: 32px;
@@ -65,40 +67,56 @@
   content: '';
 }
 
-.section2 {
-  padding-bottom: 20%;
+.timer_wrap {
   display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  text-align: center;
+  background-color: #d94f55;
+  font-size: 20px;
+}
+.timer_wrap > #timer {
+  width: 105px;
+  margin: 0 8px;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: #fff;
+}
+
+.section2 {
+  display: flex;
+  padding: 20px 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: visible;
 }
-.section2 > h1 {
-  font-size: 32px;
-}
-
-.section2 > h1 > span {
-  font-size: 32px;
-}
 
 .section2 > h2 {
   font-size: 18px;
-  margin-top: 12px;
+  text-align: center;
 }
 .section2 > p {
   margin-top: 8px;
   font-size: 14px;
   line-height: 1;
   color: #ccc;
+  text-align: center;
 }
 
 .section3 {
   display: flex;
-  padding: 20% 0;
+  padding: 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./images/img_section3.png') center/cover no-repeat;
 }
 
 .section3 > * {
@@ -107,11 +125,14 @@
 
 .section3 > h2 {
   font-size: 28px;
+  font-weight: 300;
+  color: #c7c7c7;
+  margin-bottom: 14px;
 }
 .section3 > h1 {
-  margin: 42px 0;
   font-weight: bold;
   font-size: 46px;
+  margin-bottom: 60px;
 }
 
 .section4 {
@@ -120,24 +141,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #48413b;
 }
 
 .section4 > h2 {
   font-size: 24px;
   text-align: center;
+  color: #fff;
+}
+.section4 > div {
+  display: flex;
+  max-width: 690px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .section4 > h2 > span {
   font-size: 24px;
+  color: #d68327;
 }
 
 .section4 > h2:first-child {
-  margin-bottom: 18px;
+  margin-bottom: 42px;
 }
 
 .section4 > ul {
   display: flex;
-  margin-top: 46px;
+  margin-top: 28px;
   padding: 20px;
   gap: 24px;
 }
@@ -147,16 +179,23 @@
   width: 25%;
   flex-direction: column;
 }
+
 .section4 > ul > li > div {
   margin-top: 8px;
 }
+
 .section4 > ul > li > div > p {
   line-height: 1.2;
   font-size: 14px;
+  text-align: center;
+  color: #fff;
 }
-
+.section4 > ul > li > div > p:first-child {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
 .section4 > div {
-  margin-top: 24px;
+  margin-top: 64px;
   font-size: 12px;
 }
 .section4 > div > p {
@@ -173,22 +212,38 @@
   justify-content: center;
   background: url('./images/bg_section5.png') center/cover no-repeat;
 }
+#date {
+  font-family: 'KHNPHD', sans-serif;
+}
 .section5 > div {
   width: 100%;
-  border: 2px solid #e8a54e;
+  border: 4px solid #e8a54e;
 }
 
 .section5 > div > div {
-  padding: 20px;
-  background: #e8a54e;
+  padding: 10px;
+  height: 60px;
+  background: #fff;
 }
 
-.section5 > div > div > p {
-  font-size: 24px;
+.section5 > div > div > div {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  background: #d68327;
+  height: 100%;
 }
 
-.section5 > div > div > p > span {
-  font-size: 24px;
+.section5 > div > div > div > p {
+  font-size: 18px;
+  font-family: 'KHNPHD', sans-serif;
+}
+
+.section5 > div > div > div > p > span {
+  font-size: 18px;
+}
+.section5 > div > div > div > ul {
+  display: flex;
 }
 
 .section5 > div > ul {
@@ -201,51 +256,66 @@
 
 .section5 > div > ul > li {
   font-size: 18px;
+  text-align: center;
 }
 
 .section6 {
   display: flex;
-
+  padding: 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(rgba(155, 155, 155, 0.6), rgba(0, 0, 0, 0.6)),
+    url('./images/img_section6.png') center/cover no-repeat;
 }
 
-.section6 > h1 {
-  margin: 48px 0;
+.section6_tit {
+  margin: 48px 0 24px 0;
   font-size: 32px;
+  text-align: center;
+  color: #a9915d;
 }
 
 .section6 > div {
   width: 100%;
-  padding: 40px;
-  background-color: #4e4e4e;
+  background: rgba(66, 66, 66, 0.7);
+  padding: 17px;
+  border-radius: 6px;
 }
 
 .section6 > div > div {
   width: 100%;
   padding: 20px;
-  background-color: #fff;
+  background: rgba(211, 211, 211, 0.3);
+  border-radius: 6px;
+  border: 1px solid #787878;
 }
 
-.section6 > div > button {
+#subject {
+  text-align: center;
+  color: #fff;
+}
+
+#subject_btn {
+  position: relative;
   display: block;
   width: 100%;
   padding: 20px;
   margin-top: 20px;
-  background: #fff;
-  font-size: 16px;
+  background: rgba(255, 252, 252, 0.8);
+  font-size: 18px;
+  border-radius: 3px;
+  font-weight: 600;
 }
-
-.timer_wrap {
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 20px 0;
-  font-size: 32px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 5px 25px 3px rgba(204, 204, 204, 0.39);
+#subject_btn::after {
+  position: absolute;
+  display: block;
+  width: 52px;
+  height: 25px;
+  right: 30px;
+  bottom: -13px;
+  background: url(./images/cursor.png);
+  content: '';
 }
 
 .timer_wrap > span {
